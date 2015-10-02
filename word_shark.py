@@ -33,18 +33,12 @@ def main():
         # Remove newline characters
         word = line.rstrip('\n')
         
-        # Get the length of each word
-        #length = len(word)
-        
         # To begin, each word has a value of 1
         value = 1        
         # Iterate over each letter in the word
         for i in word:
             # The total value of each word is the product of the value of each letter
             value *= letter_values[ord(i) - offset]
-        
-        # Print each word's value, for debugging    
-        print value
         
         # Add word and value to dictionary
         organized_words[value].append(word)
